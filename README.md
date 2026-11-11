@@ -1,6 +1,6 @@
 # Medical Hand Assist Glove
 
-![Medical Hand Assist Glove - Current Prototype](glove-prototype.jpg)
+![Medical Hand Assist Glove - Current Prototype](media/glove-prototype.jpg)
 
 This is an ongoing personal R&D project aimed at developing a wearable glove to monitor finger movement and contact-force sensing for hand rehabilitation.
 
