@@ -52,8 +52,6 @@ The goal at this stage was not to find the most accurate sensor available, but t
 
 **Candidate 1 — Resistive Flex Sensors**
 
-![Medical Hand Assist Glove - Current Prototype](media/flex_sensor.jpg)
-
 <img src="media/flex_sensor.jpg" width="250" alt="Flex Sensor">
 
 *Advantages:*
@@ -72,7 +70,7 @@ The goal at this stage was not to find the most accurate sensor available, but t
 
 **Candidate 2 — IMU-Based Sensing**
 
-![Medical Hand Assist Glove - Current Prototype](media/IMU.jpg)
+<img src="media/IMU.jpg" width="250" alt="IMU Sensor">
 
 *Advantages:*
 - Provides acceleration and angular-motion information.
@@ -88,7 +86,7 @@ The goal at this stage was not to find the most accurate sensor available, but t
 
 **Candidate 3 — Magnetic Sensing (Hall-Effect / Magnetic Position Sensing)**
 
-![Medical Hand Assist Glove - Current Prototype](media/HALL.jpg)
+<img src="media/HALL.jpg" width="250" alt="HALL Sensor">
 
 *Advantages:*
 - Contactless measurement principle.
@@ -108,7 +106,7 @@ For the contact-force measurement, I considered several technologies with differ
 
 **Candidate 1 — FSR 402 (Force-Sensitive Resistor)**
 
-![Medical Hand Assist Glove - Current Prototype](media/FSR.jpg)
+<img src="media/FSR.jpg" width="250" alt="FSR Sensor">
 
 *Advantages:*
 - Thin and lightweight sensing element.
@@ -128,7 +126,7 @@ Three sensors have been mechanically installed. Electrical integration and force
 
 **Candidate 2 — TE Connectivity FS1901-0000-0500-G**
 
-![Medical Hand Assist Glove - Current Prototype](media/FS1901.jpg)
+<img src="media/FS1901.jpg" width="250" alt="FS1901 Sensor">
 
 *Technology: Miniature compression load cell — 5 N nominal range.*
 
@@ -147,7 +145,7 @@ Three sensors have been mechanically installed. Electrical integration and force
 
 **Candidate 3 — Honeywell FSS005WNSB**
 
-![Medical Hand Assist Glove - Current Prototype](media/FSS.jpg)
+<img src="media/FSS.jpg" width="250" alt="FSS Sensor">
 
 *Technology: Low-profile piezoresistive force sensor — 0–5 N.*
 
@@ -166,7 +164,7 @@ Three sensors have been mechanically installed. Electrical integration and force
 
 **Candidate 4 — ams OSRAM SFH 7065**
 
-![Medical Hand Assist Glove - Current Prototype](media/SFH.jpg)
+<img src="media/SFH.jpg" width="250" alt="SFH Sensor">
 
 *Technology: Optical force-sensing front-end.*
 
@@ -184,7 +182,7 @@ Three sensors have been mechanically installed. Electrical integration and force
 
 **Candidate 5 — Flexible Pressure-Sensing Films / Textiles**
 
-![Medical Hand Assist Glove - Current Prototype](media/Flexible_textiles.png)
+<img src="media/Flexible_textiles.jpg" width="250" alt="Flexible_textiles Sensor">
 
 *Advantages:*
 - Potential for conformable sensing surfaces.
@@ -203,6 +201,7 @@ Three sensors have been mechanically installed. Electrical integration and force
 *Technology: Miniature piezoresistive force sensor (0–8 N).*
 
 ![Medical Hand Assist Glove - Current Prototype](media/HSFPA.jpg)
+<img src="media/HSFPA.jpg" width="250" alt="HSFPA Sensor">
 
 *Advantages:*
 - Extremely compact package (2.0 × 1.6 × 0.66 mm), potentially suitable for localized fingertip sensing.
