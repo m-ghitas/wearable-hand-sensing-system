@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a1020" />
+  <title>Glove Motion Lab V4</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">G</div>
+      <div class="brand-copy">
+        <div class="eyebrow">REAL-TIME MOTION CAPTURE</div>
+        <h1>Glove Motion Lab</h1>
+      </div>
+      <div class="topbar-right">
+        <span class="version-tag">V4 · ANIMATION-DERIVED KINEMATICS</span>
+        <span class="status-dot" id="globalDot"></span>
+        <span id="globalStatus" class="global-status">DEMO MODE</span>
+      </div>
+    </header>
+
+    <main class="main-grid">
+      <aside class="sidebar">
+        <section class="panel connection-panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">DEVICE</div>
+              <h2>Connection</h2>
+            </div>
+            <span class="connection-state demo" id="connectionState">DEMO</span>
+          </div>
+          <div class="device-row">
+            <div class="device-icon">⌁</div>
+            <div class="device-copy">
+              <strong>ESP32-C3 + ADS1115</strong>
+              <span id="deviceDetail">Waiting for serial connection</span>
+            </div>
+          </div>
+          <button class="primary-button" id="connectButton">Connect glove <span>↗</span></button>
+          <button class="subtle-button" id="disconnectButton" disabled>Disconnect</button>
+          <div class="connection-note" id="connectionNote">Demo controls are active. Connect the board to use live readings.</div>
+        </section>
+
+        <section class="panel calibration-panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">PERSONALIZE</div>
+              <h2>Finger calibration</h2>
+            </div>
+            <span class="cal-count" id="calCount">0 / 5</span>
+          </div>
+          <p class="panel-description">Capture both hand positions while wearing the glove. Keep each pose steady for a moment.</p>
+          <div class="calibration-actions">
+            <button class="capture-button open" id="captureOpen" disabled><span class="capture-symbol">○</span> Capture OPEN</button>
+            <button class="capture-button closed" id="captureClosed" disabled><span class="capture-symbol">●</span> Capture CLOSED</button>
+          </div>
+          <div class="cal-list" id="calList"></div>
+          <button class="text-button" id="resetCalibration">Reset calibration</button>
+        </section>
+
+        <section class="panel telemetry-panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">LIVE TELEMETRY</div>
+              <h2>Finger movement</h2>
+            </div>
+            <span class="live-label"><i></i> LIVE</span>
+          </div>
+          <div id="telemetryRows"></div>
+        </section>
+
+        <section class="panel pressure-panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">OPTIONAL INPUTS</div>
+              <h2>Pressure sensors</h2>
+            </div>
+            <span class="pending-tag">NOT CONNECTED</span>
+          </div>
+          <p class="panel-description">FSR channels are reserved for the next hardware step.</p>
+          <div class="pressure-row"><span>FSR 1 · A0</span><strong id="fsr1Value">—</strong><div class="pressure-track"><i id="fsr1Bar"></i></div></div>
+          <div class="pressure-row"><span>FSR 2 · A1</span><strong id="fsr2Value">—</strong><div class="pressure-track"><i id="fsr2Bar"></i></div></div>
+          <div class="pressure-row"><span>FSR 3 · A2</span><strong id="fsr3Value">—</strong><div class="pressure-track"><i id="fsr3Bar"></i></div></div>
+        </section>
+      </aside>
+
+      <section class="stage-column">
+        <div class="stage-toolbar">
+          <div>
+            <div class="eyebrow">3D DIGITAL TWIN</div>
+            <h2>Anatomical hand · independent joint articulation</h2>
+          </div>
+          <div class="stage-tools">
+            <button class="tool-button active" id="palmViewButton" title="Palm view">Palm</button>
+            <button class="tool-button" id="sideViewButton" title="Side view">Side</button>
+            <button class="tool-button" id="resetViewButton" title="Reset camera">↺</button>
+          </div>
+        </div>
+
+        <div class="stage" id="stage">
+          <div class="stage-grid"></div>
+          <div class="stage-glow"></div>
+          <div class="stage-canvas" id="canvasHost"></div>
+          <div class="stage-overlay top-left"><span class="overlay-dot"></span> <span id="renderMode">SIMULATION READY</span></div>
+          <div class="stage-overlay top-right">ORBIT · DRAG TO ROTATE</div>
+          <div class="stage-caption"><span class="caption-kicker">HAND POSE</span><strong id="poseName">OPEN HAND</strong><span id="poseHint">Move a finger slider or connect your glove.</span></div>
+          <div class="axis-cube"><span>X</span><span>Y</span><span>Z</span></div>
+          <div class="stage-footer"><span id="stageFooterText">LOADING LOCAL SKINNED HAND MODEL</span><span>LIVE 3D ARTICULATION</span></div>
+        </div>
+
+        <details class="rig-diagnostics" id="rigDiagnostics">
+          <summary>Rig diagnostics · joint mapping</summary>
+          <div id="boneList" class="rig-diagnostics-body">Waiting for the new hand model…</div>
+        </details>
+
+        <div class="demo-panel panel">
+          <div class="demo-heading">
+            <div>
+              <div class="eyebrow">NO HARDWARE? NO PROBLEM.</div>
+              <h2>Simulation controls · test one finger at a time</h2>
+            </div>
+            <button class="demo-toggle active" id="demoToggle"><span></span> DEMO MODE</button>
+          </div>
+          <div class="demo-sliders" id="demoSliders"></div>
+          <div class="demo-footer">
+            <span id="dataSourceText">Use the sliders to test finger articulation.</span>
+            <button class="reset-demo" id="openHandButton">Reset to open hand ↺</button>
+          </div>
+        </div>
+        <section class="panel kinematics-panel">
+          <div class="demo-heading">
+            <div>
+              <div class="eyebrow">V4 · KINEMATICS LAB</div>
+              <h2>Independent joint diagnostics</h2>
+            </div>
+            <button class="demo-toggle" id="jointTestToggle" type="button">Enter joint test</button>
+          </div>
+          <p class="panel-description">Test each joint separately. The 0–100% controls blend toward that finger’s authored closed pose from the GLB animation; they are not clinical angle measurements.</p>
+          <div class="joint-test-toolbar">
+            <label class="joint-select-label" for="jointFingerSelect">Selected finger
+              <select id="jointFingerSelect">
+                <option value="index">Index</option>
+                <option value="middle">Middle</option>
+                <option value="ring">Ring</option>
+                <option value="pinky">Pinky</option>
+                <option value="thumb">Thumb</option>
+              </select>
+            </label>
+            <label class="axis-toggle" for="showJointAxes"><input id="showJointAxes" type="checkbox" /> Show local axes</label>
+          </div>
+          <div id="jointTestSliders" class="joint-test-sliders">
+            <div class="joint-test-placeholder">Loading the model’s joint reference data…</div>
+          </div>
+          <div class="demo-footer joint-test-footer">
+            <span id="jointTestStatus">Waiting for the hand model.</span>
+            <button class="reset-demo" id="resetJointTest" type="button">Reset selected joints ↺</button>
+          </div>
+        </section>
+        <div class="footer-note">Glove Motion Lab V4 · 21-bone anatomical rig · ESP32-C3 + ADS1115 · Local browser app</div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+{
+  "asset": "emmalieker/anatomical-hand-model/exports/hand_model.glb",
+  "sourceAnimation": "RigAction",
+  "method": "For each digit, choose the keyframe with the largest sum of local quaternion rotation magnitudes across its finger chain. Store each joint local delta as inverse(restQuaternion) * animationQuaternion at that keyframe. Values are model-specific reference poses, not clinical joint-angle measurements.",
+  "poseTimeSeconds": {
+    "index": 8.75,
+    "middle": 6.25,
+    "ring": 6.25,
+    "pinky": 6.25,
+    "thumb": 10.0
+  },
+  "poses": {
+    "index": {
+      "index_prox": {
+        "role": "MCP",
+        "deltaQuaternion": [
+          0.09370452,
+          -0.02160838,
+          0.78563609,
+          0.61116976
+        ],
+        "localAxis": [
+          0.118389,
+          -0.027301,
+          0.992592
+        ],
+        "referenceRotationDeg": 104.65
+      },
+      "index_midd": {
+        "role": "PIP",
+        "deltaQuaternion": [
+          -0.00365098,
+          0.02440607,
+          0.80351346,
+          0.59477486
+        ],
+        "localAxis": [
+          -0.004542,
+          0.03036,
+          0.999529
+        ],
+        "referenceRotationDeg": 107.01
+      },
+      "index_dist": {
+        "role": "DIP",
+        "deltaQuaternion": [
+          0.00712887,
+          -0.0014414,
+          0.70710529,
+          0.70707087
+        ],
+        "localAxis": [
+          0.010081,
+          -0.002038,
+          0.999947
+        ],
+        "referenceRotationDeg": 90.01
+      }
+    },
+    "middle": {
+      "midd_prox": {
+        "role": "MCP",
+        "deltaQuaternion": [
+          0.02297355,
+          0.03404824,
+          0.82824983,
+          0.55885163
+        ],
+        "localAxis": [
+          0.027703,
+          0.041058,
+          0.998773
+        ],
+        "referenceRotationDeg": 112.05
+      },
+      "midd_midd": {
+        "role": "PIP",
+        "deltaQuaternion": [
+          2.2e-07,
+          8e-08,
+          0.78267687,
+          0.62242824
+        ],
+        "localAxis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "referenceRotationDeg": 103.01
+      },
+      "midd_dist": {
+        "role": "DIP",
+        "deltaQuaternion": [
+          5e-08,
+          -1.3e-07,
+          0.70710682,
+          0.70710674
+        ],
+        "localAxis": [
+          0.0,
+          -0.0,
+          1.0
+        ],
+        "referenceRotationDeg": 90.0
+      }
+    },
+    "ring": {
+      "ring_prox": {
+        "role": "MCP",
+        "deltaQuaternion": [
+          -0.06401522,
+          0.05937864,
+          0.79957196,
+          0.59418929
+        ],
+        "localAxis": [
+          -0.079589,
+          0.073824,
+          0.99409
+        ],
+        "referenceRotationDeg": 107.09
+      },
+      "ring_midd": {
+        "role": "PIP",
+        "deltaQuaternion": [
+          -0.01070689,
+          -0.01378211,
+          0.78957386,
+          0.61340732
+        ],
+        "localAxis": [
+          -0.013557,
+          -0.017451,
+          0.999756
+        ],
+        "referenceRotationDeg": 104.33
+      },
+      "ring_dist": {
+        "role": "DIP",
+        "deltaQuaternion": [
+          1.1e-07,
+          -2e-08,
+          0.70710686,
+          0.7071067
+        ],
+        "localAxis": [
+          0.0,
+          -0.0,
+          1.0
+        ],
+        "referenceRotationDeg": 90.0
+      }
+    },
+    "pinky": {
+      "pinky_prox": {
+        "role": "MCP",
+        "deltaQuaternion": [
+          -0.02676848,
+          -0.00528545,
+          0.80365612,
+          0.59446812
+        ],
+        "localAxis": [
+          -0.033289,
+          -0.006573,
+          0.999424
+        ],
+        "referenceRotationDeg": 107.05
+      },
+      "pinky_midd": {
+        "role": "PIP",
+        "deltaQuaternion": [
+          -0.01171792,
+          -0.01118958,
+          0.75461448,
+          0.65596835
+        ],
+        "localAxis": [
+          -0.015525,
+          -0.014825,
+          0.99977
+        ],
+        "referenceRotationDeg": 98.01
+      },
+      "pinky_dist": {
+        "role": "DIP",
+        "deltaQuaternion": [
+          1e-08,
+          -3e-08,
+          0.70710677,
+          0.70710679
+        ],
+        "localAxis": [
+          0.0,
+          -0.0,
+          1.0
+        ],
+        "referenceRotationDeg": 90.0
+      }
+    },
+    "thumb": {
+      "thumb_trapez": {
+        "role": "BASE",
+        "deltaQuaternion": [
+          0.00228077,
+          0.05223747,
+          0.29625349,
+          0.95367705
+        ],
+        "localAxis": [
+          0.007582,
+          0.173643,
+          0.984779
+        ],
+        "referenceRotationDeg": 35.02
+      },
+      "thumb_meta": {
+        "role": "CMC",
+        "deltaQuaternion": [
+          0.09189162,
+          -0.00858922,
+          0.30984462,
+          0.94629724
+        ],
+        "localAxis": [
+          0.284232,
+          -0.026567,
+          0.958387
+        ],
+        "referenceRotationDeg": 37.72
+      },
+      "thumb_prox": {
+        "role": "MCP",
+        "deltaQuaternion": [
+          0.03269231,
+          0.025427,
+          0.41011476,
+          0.91109306
+        ],
+        "localAxis": [
+          0.079312,
+          0.061686,
+          0.994939
+        ],
+        "referenceRotationDeg": 48.69
+      },
+      "thumb_dist": {
+        "role": "IP",
+        "deltaQuaternion": [
+          -2.9e-07,
+          -1.7e-07,
+          0.65657423,
+          0.75426142
+        ],
+        "localAxis": [
+          -0.0,
+          -0.0,
+          1.0
+        ],
+        "referenceRotationDeg": 82.08
+      }
+    }
+  }
+}
