@@ -24,7 +24,6 @@ void setup() {
   Wire.begin(SDA_PIN, SCL_PIN);
 
   if (!ads.begin(ADS_ADDRESS, &Wire)) {
-    // Send a clear diagnostic line; the simulator will ignore non-DATA lines.
     Serial.println("ERROR,ADS1115_NOT_FOUND");
     while (true) delay(1000);
   }
