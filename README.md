@@ -76,11 +76,11 @@ These candidates were investigated at the technology-selection level; they have 
 
 I selected the **ESP32-C3** for its compact size, analog inputs, I²C interface, and future wireless capabilities.
 
-<img src="media/ESP32C3.jpg" width="300"><p>**ESP32C3**</p>
+<img src="media/ESP32C3.jpg" width="300">
 
 The system requires eight analog channels, so I added an **ADS1115 external ADC** to extend the available inputs.
 
-<img src="media/ADS1115.png" width="300"><p>**ADS1115**</p>
+<img src="media/ADS1115.png" width="300">
 
 | Component | Configuration |
 |---|---|
