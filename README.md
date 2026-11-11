@@ -17,3 +17,20 @@ The idea is to develop a wearable glove that can monitor how well a patient can 
 The current prototype focuses on finger-motion tracking and real-time 3D visualization. Contact-force sensing is being integrated as the next development step.
 
 The longer-term goal is to collect consistent measurements that can help physiotherapists compare hand function between treatment sessions.
+
+## 2. From Clinical Needs to Engineering Requirements
+
+Before selecting sensors or designing the electronics, I first translated the physiotherapists' needs into quantities that the system could measure.
+
+The two main questions were:
+- Can the patient move and control individual fingers?
+- Can the patient apply force while grasping an object?
+
+| Clinical need | Engineering measurement | Current approach |
+|---|---|---|
+| Assess finger bending and extension | Relative finger flexion | Five flex sensors, one per finger |
+| Observe individual finger control | Independent finger response | Five sensor channels and 3D visualization |
+| Assess interaction with a held object | Contact-force response | Three mechanically installed FSR sensors; electrical testing pending |
+| Monitor rehabilitation progress | Repeatable measurements across sessions | Planned after sensor characterization and data logging |
+
+For the first prototype, I focused on demonstrating finger-motion sensing and the integration of the wearable system. Reliable force measurement and longitudinal progress tracking are objectives for the next development stages.
