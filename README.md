@@ -182,7 +182,7 @@ Three sensors have been mechanically installed. Electrical integration and force
 
 **Candidate 5 — Flexible Pressure-Sensing Films / Textiles**
 
-<img src="media/Flexible_textiles.jpg" width="250" alt="Flexible_textiles Sensor">
+<img src="media/Flexible_textiles.png" width="250" alt="Flexible_textiles Sensor">
 
 *Advantages:*
 - Potential for conformable sensing surfaces.
