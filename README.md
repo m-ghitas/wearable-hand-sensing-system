@@ -200,7 +200,6 @@ Three sensors have been mechanically installed. Electrical integration and force
 
 *Technology: Miniature piezoresistive force sensor (0–8 N).*
 
-![Medical Hand Assist Glove - Current Prototype](media/HSFPA.jpg)
 <img src="media/HSFPA.jpg" width="250" alt="HSFPA Sensor">
 
 *Advantages:*
@@ -230,7 +229,7 @@ Three sensors have been mechanically installed. Electrical integration and force
 
 Based on the first-stage requirements, I selected two sensing technologies:
 
-![Medical Hand Assist Glove - Current Prototype](media/flex_sensor.jpg)  ![Medical Hand Assist Glove - Current Prototype](media/FSR.jpg)
+<img src="media/flex_sensor.jpg" width="250" alt="Flex Sensor"> <img src="media/FSR.jpg" width="250" alt="FSR Sensor">
 
 | Measurement | Initial selection | Main reason |
 |---|---|---|
