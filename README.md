@@ -26,11 +26,11 @@ The two main questions were:
 - Can the patient move and control individual fingers?
 - Can the patient apply force while grasping an object?
 
-| Clinical need | Engineering measurement | Current approach |
+| Clinical need | Quantity to be measurement | Proposed approach |
 |---|---|---|
 | Assess finger bending and extension | Relative finger flexion | Five flex sensors, one per finger |
 | Observe individual finger control | Independent finger response | Five sensor channels and 3D visualization |
-| Assess interaction with a held object | Contact-force response | Three mechanically installed FSR sensors; electrical testing pending |
+| Assess interaction with a held object | Contact-force response | Three mechanically installed force sensors; electrical testing pending |
 | Monitor rehabilitation progress | Repeatable measurements across sessions | Planned after sensor characterization and data logging |
 
 For the first prototype, I focused on demonstrating finger-motion sensing and the integration of the wearable system. Reliable force measurement and longitudinal progress tracking are objectives for the next development stages.
