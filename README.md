@@ -54,7 +54,7 @@ The goal at this stage was not to find the most accurate sensor available, but t
 
 ![Medical Hand Assist Glove - Current Prototype](media/flex_sensor.jpg)
 
-<img src="media/sensors/flex_sensor.jpg" width="250" alt="Flex Sensor">
+<img src="media/flex_sensor.jpg" width="250" alt="Flex Sensor">
 
 *Advantages:*
 - Thin, flexible construction suitable for mounting along the fingers.
