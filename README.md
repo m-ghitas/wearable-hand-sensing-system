@@ -42,7 +42,7 @@ Before selecting the sensors, I divided the measurement requirements into two ma
 1. **Finger motion sensing:** Detecting the bending and extension of individual fingers.
 2. **Contact-force sensing:** Detecting the force-related response when the fingers press against or hold an object.
 
-![Medical Hand Assist Glove - Current Prototype](media/glove-Motion_Force.png)
+![Medical Hand Assist Glove - Current Prototype](media/Motion_Force.png)
 
 For both groups, I considered different sensing technologies based on their working principles, mechanical integration, signal acquisition requirements, cost, and suitability for a wearable device.
 
