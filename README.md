@@ -76,11 +76,11 @@ These candidates were investigated at the technology-selection level; they have 
 
 I selected the **ESP32-C3** for its compact size, analog inputs, I²C interface, and future wireless capabilities.
 
-<img src="media/ESP32C3.jpg" width="110"><p>**ESP32C3**</p>
+<img src="media/ESP32C3.jpg" width="300"><p>**ESP32C3**</p>
 
 The system requires eight analog channels, so I added an **ADS1115 external ADC** to extend the available inputs.
 
-<img src="media/ADS1115.png" width="110"><p>**ADS1115**</p>
+<img src="media/ADS1115.png" width="300"><p>**ADS1115**</p>
 
 | Component | Configuration |
 |---|---|
@@ -120,7 +120,7 @@ After trying different arrangements, I introduced **compliant rubber pads** to r
 
 This worked better in the current prototype, although long-term positioning and repeatability still need testing.
 
-<img src="media/RubberPads.png" width="110"><p>**RubberPads**</p>
+<img src="media/RubberPads.png" width="500"><p>**RubberPads**</p>
 
 For force sensing, the FSR sensing area is relatively large for some fingertip locations. Smaller sensors and improved load-transfer interfaces are being considered.
 
