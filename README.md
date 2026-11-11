@@ -72,7 +72,7 @@ These candidates were investigated at the technology-selection level; they have 
 
 ## 4. Hardware Architecture
 
-![Current glove prototype](media/Hardware_wiring.jpg)
+![Hardware_Schematic](media/Hardware_wiring.png)
 
 I selected the **ESP32-C3** for its compact size, analog inputs, I²C interface, and future wireless capabilities.
 
