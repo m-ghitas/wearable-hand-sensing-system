@@ -5,6 +5,8 @@
 
 ![Current glove prototype](media/glove-prototype.jpg)
 
+[Watch the prototype demonstration](https://youtu.be/xcPXu10T4b0)
+
 ## 1. Project Overview
 
 This project started from a request by physiotherapy professionals looking for a way to obtain measurable feedback on hand function during rehabilitation, particularly for patients recovering from stroke or neurological conditions.
@@ -70,9 +72,15 @@ These candidates were investigated at the technology-selection level; they have 
 
 ## 4. Hardware Architecture
 
+![Current glove prototype](media/Hardware_wiring.jpg)
+
 I selected the **ESP32-C3** for its compact size, analog inputs, I²C interface, and future wireless capabilities.
 
+<img src="media/ESP32C3.jpg" width="110"><p>**ESP32C3**</p>
+
 The system requires eight analog channels, so I added an **ADS1115 external ADC** to extend the available inputs.
+
+<img src="media/ADS1115.png" width="110"><p>**ADS1115**</p>
 
 | Component | Configuration |
 |---|---|
@@ -109,9 +117,10 @@ My first mounting attempts either restricted finger motion or allowed the sensor
 
 After trying different arrangements, I introduced **compliant rubber pads** to retain the sensors while allowing small relative movements.
 
+
 This worked better in the current prototype, although long-term positioning and repeatability still need testing.
 
-<!-- Add your real rubber-pad mounting photo here -->
+<img src="media/RubberPads.png" width="110"><p>**RubberPads**</p>
 
 For force sensing, the FSR sensing area is relatively large for some fingertip locations. Smaller sensors and improved load-transfer interfaces are being considered.
 
@@ -119,9 +128,9 @@ For force sensing, the FSR sensing area is relatively large for some fingertip l
 
 ## 6. Software & Real-Time Visualization
 
-I developed a browser-based application using **JavaScript, Three.js and Web Serial** to visualize finger movements in real time.
+I developed (with the aid of ChatGPT) a browser-based application using **JavaScript, Three.js and Web Serial** to visualize finger movements in real time.
 
-<!-- Add a real screenshot of the hand simulation here -->
+![Current glove prototype](media/Simulation.png)
 
 The software currently includes:
 
